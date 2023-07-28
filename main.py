@@ -1,4 +1,5 @@
 import requests
+import time
 from bs4 import BeautifulSoup
 
 url = 'https://www.booksiteethiopia.com'
@@ -18,8 +19,9 @@ def scrape_data(html_code):
 
         base_url = 'https://api.telegram.org/bot6342347387:AAEWK6_qJ21dTaYCY-Zbgie_fiY2D1DUCjo/sendMessage?chat_id=-1001940209421&text='+text+image_url
         requests.get(base_url)
+        time.sleep(5)
       #   print("Image URL:", image_url)
         print("Text:", text)
-        
+       
 
 scrape_data(content)
